@@ -18,10 +18,9 @@ public class HelloWorld extends Application {
         primaryStage.setTitle("Hello world");
         Group root = new Group();
         Pane pane = new Pane(root);
-        Scene scene = new Scene(root,600,400);
-        //stage.setScene(scene);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        Scene theScene = new Scene(pane,600,400);
+        //stage.setScene(theScene);
+        primaryStage.setScene(theScene);
 
         /*Label bonjour = new Label("Que viva ENSEA");
         Button button = new Button("Pfffft");
@@ -32,6 +31,7 @@ public class HelloWorld extends Application {
             //System.out.println(e,getEventType.getName());
             bonjour.setLayoutY(bonjour.getLayoutY()+10);
         });*/
+
         Image spriteSheet = new Image("file:img/heros.png");
         ImageView sprite = new ImageView(spriteSheet);
         sprite.setViewport(new Rectangle2D(20,0,65,100));
@@ -39,7 +39,7 @@ public class HelloWorld extends Application {
         sprite.setY(300);
         root.getChildren().add(sprite);
 
-        stage.show();
+        primaryStage.show();
     }
     public static void main(String[] args){
         launch(args);
