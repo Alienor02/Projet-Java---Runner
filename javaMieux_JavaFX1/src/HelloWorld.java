@@ -18,7 +18,9 @@ public class HelloWorld extends Application {
         primaryStage.setTitle("Hello world");
         Group root = new Group();
         Pane pane = new Pane(root);
-        Scene theScene = new Scene(pane,600,400);
+        Camera camera = new Camera(0,0);
+        GameScene theScene = new GameScene(pane,600,400,camera);
+        theScene.render();
         //stage.setScene(theScene);
         primaryStage.setScene(theScene);
 
