@@ -17,12 +17,13 @@ public class HelloWorld extends Application {
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("Hello world");
         Group root = new Group();
-        Pane pane = new Pane(root);
-        Camera camera = new Camera(0,0);
-        GameScene theScene = new GameScene(pane,600,400,camera);
-        theScene.render();
+
+        GameScene theScene = new GameScene(root);
         //stage.setScene(theScene);
         primaryStage.setScene(theScene);
+
+        primaryStage.setWidth(600); // favourite width
+        primaryStage.setHeight(400); // favourite height
 
         /*Label bonjour = new Label("Que viva ENSEA");
         Button button = new Button("Pfffft");
@@ -34,12 +35,12 @@ public class HelloWorld extends Application {
             bonjour.setLayoutY(bonjour.getLayoutY()+10);
         });*/
 
-        Image spriteSheet = new Image("file:img/heros.png");
+        /*Image spriteSheet = new Image("file:img/heros.png");
         ImageView sprite = new ImageView(spriteSheet);
         sprite.setViewport(new Rectangle2D(20,0,65,100));
         sprite.setX(200);
         sprite.setY(300);
-        root.getChildren().add(sprite);
+        root.getChildren().add(sprite);*/
 
         primaryStage.show();
     }
