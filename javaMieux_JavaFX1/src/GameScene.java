@@ -29,5 +29,22 @@ public class GameScene extends Scene {
         root.getChildren().add(left.getBackground());
         root.getChildren().add(right.getBackground());
         root.getChildren().add(hero.getSprite());
+
+        cam = new Camera(0,50,600,350);
+
+        int nbOfLives = 0;
+        if (nbOfLives.value==3){
+            numberOfLives = new Hero("file:img/lives3.png", 100,200,0);
+        }
+        else if (nbOfLives.value==2){
+            numberOfLives = new Hero("file:img/lives2.png", 100,200,0);
+        }
+        else if (nbOfLives.value==1){
+            numberOfLives = new Hero("file:img/lives1.png", 100,200,0);
+        }
+        else {
+            numberOfLives = new Hero("file:img/lives0.png", 100,200,0);
+        }
     }
+
 }

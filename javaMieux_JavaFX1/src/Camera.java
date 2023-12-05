@@ -1,25 +1,29 @@
 public class Camera {
-    private double x;
-    private double y;
-
-    public Camera(double x, double y) {
-        this.x = x;
-        this.y = y;
-    }
+    protected double x,widthX;
+    protected double y,widthY;
 
     public double getX() {
         return x;
     }
-
     public double getY() {
         return y;
+    }
+    public double getWidthX() {
+        return widthX;
+    }
+    public double getWidthY() {
+        return widthY;
+    }
+
+    public Camera(double x, double y, double widthX, double widthY){
+        this.x = x;
+        this.y = y;
+        this.widthX = widthX;
+        this.widthY = widthY;
     }
 
     @Override
     public String toString() {
-        return this.x + "," + this.y;
+        return "x : "+x+" y : "+y;
     }
-
-    /*public void updateCamera(long time){
-    }*/
 }
