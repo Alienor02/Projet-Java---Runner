@@ -26,4 +26,12 @@ public class StaticThing {
         return Background;
     }
     public Image getImageBackground() { return ImageBackground;}
+
+    //mettre à jour l'image
+    public void updateImage(String fileName, Integer newValue) {
+        this.ImageBackground = new Image(fileName);
+        this.Background.setImage(ImageBackground);
+        this.value = newValue;
+    }
+
 }

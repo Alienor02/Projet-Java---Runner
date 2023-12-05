@@ -22,8 +22,8 @@ public class HelloWorld extends Application {
         //stage.setScene(theScene);
         primaryStage.setScene(theScene);
 
-        primaryStage.setWidth(600); // favourite width
-        primaryStage.setHeight(400); // favourite height
+        primaryStage.setWidth(600); //width
+        primaryStage.setHeight(400); //height
 
         /*Label bonjour = new Label("Que viva ENSEA");
         Button button = new Button("Pfffft");
